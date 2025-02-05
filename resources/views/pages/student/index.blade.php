@@ -12,23 +12,23 @@
             <div class="col-md-8">
 
             <div class="form-area">
-                <form method="POST" action="">
+                <form method="POST" action="{{ route('StudentSaveData') }}">
                     @csrf
                     <div class="row">
                         <div class="col-md-6">
                             <label>Student Name</label>
-                            <input type="text" class="form-control">
+                            <input type="text" class="form-control" name="stu_name">
                         </div>
                         <div class="col-md-6">
                             <label>Student DOB</label>
-                            <input type="date" class="form-control">
+                            <input type="date" class="form-control" name="stu_dob">
 
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-12">
                             <label>Address</label>
-                            <input type="text" class="form-control">
+                            <input type="text" class="form-control" name="stu_address">
 
                         </div>
                     </div>

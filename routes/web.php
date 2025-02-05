@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\StudentController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,3 +21,5 @@ Route::get('/', function () {
 Route::get('/student', function () {
     return view('pages.student.index');
 });
+
+Route::Post('/SaveData',[StudentController::class,'saveData'])->name('StudentSaveData');
