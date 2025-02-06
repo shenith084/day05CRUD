@@ -53,20 +53,24 @@
                     </thead>
                     <tbody>
 
+                        @foreach ($students as $student )
+
+
+
                         <tr>
-                            <td scope="col">1</td>
-                            <td scope="col">Nimal Perera</td>
-                            <td scope="col">1990/08/22</td>
-                            <td scope="col">Nimal's Address</td>
+                            <td scope="col">{{ $loop->iteration }}</td>
+                            <td scope="col">{{ $student->stu_name }}</td>
+                            <td scope="col">{{ $student->stu_dob }}</td>
+                            <td scope="col">{{ $student->stu_address }}</td>
                             <td scope="col">
 
-                                <a href="">Edit</a>
+                                <a href="{{ route('studentEditData',$student->id) }}">Edit</a>
                                 |
-                                <a href="">Delete</a>
+                                <a href="{{ route('studentDeleteData',$student->id) }}">Delete</a>
 
                             </td>
                           </tr>
-
+                          @endforeach
                     </tbody>
                   </table>
             </div>

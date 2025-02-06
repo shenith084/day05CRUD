@@ -20,4 +20,30 @@ class StudentController extends Controller
         return redirect()->back();  // new page ekata gihinn aphu hitapu ekatama ganna
     }
 
+    public function showData()
+    {
+        $response['students'] = $this->student->all();
+        return view('pages.student.index')->with($response);
+    }
+
+    public function editData($id)
+    {
+        $response['student'] = $this->student->find($id);
+        return view('pages.student.edit')->with($response);
+    }
+
+    public function updateData(Request $request,$id)
+    {
+        $student = $this->student->find($id);
+        $student->update(array_merge($student->toArray(), $request->toArray()));
+        return redirect('student');
+    }
+
+    public function deleteData($id)
+    {
+        $student = $this->student->find($id);
+        $student->delete();
+        return redirect()->back();
+    }
+
 }
