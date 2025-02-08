@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Student extends Model
 {
     use HasFactory;
-
+//mention fild
     protected $fillable = [
         'stu_name',
         'stu_dob',

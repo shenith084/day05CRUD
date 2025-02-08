@@ -16,11 +16,11 @@
                     @csrf
                     <div class="row">
                         <div class="col-md-6">
-                            <label>Student Name</label>
+                            <label>Student name</label>
                             <input type="text" class="form-control" name="stu_name" value="{{ $student->stu_name }}">
                         </div>
                         <div class="col-md-6">
-                            <label>Student DOB</label>
+                            <label>Student dob</label>
                             <input type="date" class="form-control" name="stu_dob" value="{{ $student->stu_dob }}">
 
                         </div>
